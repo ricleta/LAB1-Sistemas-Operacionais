@@ -7,6 +7,7 @@ replit.nix
 .ccls-cache
 .breakpoints
 .replit
+.vscode
 LAB1/lab1
 LAB1/lab1.d
 LAB1/lab1.o
