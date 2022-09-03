@@ -1,1 +1,0 @@
-Medir diferença de tempo entre um programa sequencial que soma elementos de um array e de um que usa processos concorrentes.
