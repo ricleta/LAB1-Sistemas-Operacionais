@@ -6,6 +6,8 @@ int main(void)
   int tam = 10000;
   int i = 0;
   int soma = 0;
+  Timer comeco,fim;
+  int worker_num;
   
   int *arr1 = (int *) malloc(sizeof(int) * tam);
   int *arr2 = (int *) malloc(sizeof(int) * tam);
@@ -21,6 +23,9 @@ int main(void)
   // printa_array(arr2, tam);
   // printf("--------------------\n");
   // printa_array(arr3, tam);
+
+  worker_num = workers(8);
+
 
   for (i = 0; i < tam; i++)
   {
