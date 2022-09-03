@@ -1,5 +1,4 @@
-# Sistemas-Operacionais, Tarefa 1
-## Processos e memória compartilhada
+# Sistemas-Operacionais, Tarefa 1: Processos e memória compartilhada
 
 LAB1 = https://replit.com/@ricleta/lab1-1#LAB1/
 
