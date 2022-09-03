@@ -29,6 +29,8 @@ void printa_array(int *arr, int tam)
   }
 }
 
+
+//gera nProc processos
 int __workers(int nProc){
   int i,error;
   for(i=0;i<nProc;i++){
@@ -41,10 +43,12 @@ int __workers(int nProc){
   return i;
 }
 
+//wrapper
 int workers(int nProc){
   return __workers(nProc-1);
 }
 
+//calcula a diferenca de tempo entre dois Timers 
 float timediff(Timer t0, struct Timer t1)
 {
 	return (t1.tv_sec - t0.tv_sec) * 1000.0f + (t1.tv_usec - t0.tv_usec) / 1000.0f;
