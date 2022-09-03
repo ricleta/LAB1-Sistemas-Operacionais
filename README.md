@@ -1,8 +1,9 @@
-# Sistemas-Operacionais
+# Sistemas-Operacionais, Tarefa 1
+## Processos e memória compartilhada
 
 LAB1 = https://replit.com/@ricleta/lab1-1#LAB1/
 
-## Enunciado
+### Enunciado
 __Objetivo__: Avaliar como se comporta o tempo de execução de um algoritmo com e sem
 concorrência entre os algoritmos (sequencial x paralelo).
 
@@ -20,13 +21,13 @@ compartilhada entre os processos (irmãos) para armazenar os vetores.
 obtidos e a discussão dos resultados. Indique ainda o que está e o que não está funcionando
 no seu programa.
 
-> ### Importante
+> #### Importante
 > - O vetor vetA deve ser inicializado com o valor = 1 em todos os elementos e vetB com valor = 2. 
 > - Cada processo vai executar a soma em 125 (ou 1.250) posições dos vetores, de forma a não usarem a mesma
 posição de memória. Tome o tempo decorrido na execução do algoritmo de soma.
 
 
-## Entrega
+### Entrega
 A tarefa pode ser feita em dupla. Você deve fazer upload do relatório (.pdf) e do código fonte
 (.c) no site do EAD. Indique claramente no relatório e no código fonte os nomes e matrículas
 dos alunos que compõem o grupo.
