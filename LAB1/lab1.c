@@ -10,7 +10,8 @@ int main(void)
   int i = 0;
   int soma = 0;
   Timer comeco, fim;
-  int worker_num;
+  int num_workers; //numero de workers
+  int worker_id; //id de 0 a num_workers-1
   int segmento;
 
   int *arr1 = (int *)malloc(sizeof(int) * tam);
@@ -26,7 +27,7 @@ int main(void)
 
   segmento = shmget(IPC_PRIVATE, sizeof(int), IPC_CREATE | IPC_EXCL | S_IRUSR | S_IWUSR);
   arr3 = (int **)shmat(segmento, 0, 0);
-  
+
   *arr3 = (int *)malloc(sizeof(int) * tam);
   // printf("--------------------\n");
   // printa_array(arr1, tam);
@@ -37,17 +38,12 @@ int main(void)
 
   gettimeofday(&comeco, NULL); // incio
 
-  worker_num = workers(8);
+  worker_id = workers(num_workers); //gera num_workers processos filhos e 1 pai
 
-  /*
-    estou gerando 8 processos, porem talvez seja pra gerar 9
-    8 filhos e 1 pai
-  */
-
-  for (int i = comeco; i < fim; i++)
-  {
-    *arr3[i] = arr1[i] + arr2[i];
-  }
+ if(worker_id!=num_workers) //verifica se eh um dos filhos
+    for (int i = comeco; i < fim; i++)
+      *arr3[i] = arr1[i] + arr2[i];
+    
 
   gettimeofday(&fim, NULL);
 
@@ -57,6 +53,7 @@ int main(void)
 
   free(arr1);
   free(arr2);
+  wait_workers(num_workers); //espera os num_workers processos terminarem
   shmdt(p);
   // libera a memória compartilhada
   free(*arr3); // N sei se o free deveria ser aqui
