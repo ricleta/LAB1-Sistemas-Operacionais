@@ -34,27 +34,6 @@ void printa_array(int *arr, int tam)
   }
 }
 
-//espera n processos filho terminarem
-void wait_workers(int n){
-  int error;
-  for(int i=0;i<n;i++)
-    waitpid(-1,&error,0);
-}
-
-//gera nProc processos filhos e 1 pai
-int workers(int nProc){
-  int i,error;
-  int aux;
-  for(i=0;i<nProc;i++){
-    aux=fork();
-    if(aux==0){
-      break;
-    }
-  }
-  return i;
-}
-
-
 //calcula a diferenca de tempo entre dois Timers 
 float timediff(Timer t0, Timer t1)
 {
