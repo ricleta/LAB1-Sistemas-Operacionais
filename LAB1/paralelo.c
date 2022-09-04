@@ -7,12 +7,11 @@ int main(void)
   int num_filhos = 8;
   int tam_p = tam / num_filhos;
   int i = 1;
+  int j = 0;
   int status = 0;
-  
+  int pid, segmento;
 
   Timer comeco, fim;
-  
-  int segmento;
 
   int *vetA = (int *)malloc(sizeof(int) * tam);
   int *vetB = (int *)malloc(sizeof(int) * tam);
@@ -29,15 +28,17 @@ int main(void)
 
   for (i = 1; i <= num_filhos; i++)
   {
-    int pid = fork();
+    pid = fork();
     
     if(pid == 0)
     {
-      for (int j = tam_p * (i - 1); j < i * tam_p; j++)
+      for (j = tam_p * (i - 1); j < i * tam_p; j++)
       {
         vetC[j] = vetA[j] + vetB[j];
+        // printf("vetC[%d] = %d\n", j, vetC[j]);
       }
-        
+
+      // printf("vetC[%d] = %d\n", j, vetC[j]);
       exit(0);
     }
   }
@@ -48,8 +49,6 @@ int main(void)
   }
 
   gettimeofday(&fim, NULL);
-
-  printa_array(vetC, tam);
 
   printf("\nTempo : %f ms\n", timediff(comeco, fim)); // fim
 

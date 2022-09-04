@@ -13,7 +13,6 @@ int main(void)
   
   preenche_array(1, tam, vetA);
   preenche_array(2, tam, vetB);
-  preenche_array(3, tam, vetC);  
 
   gettimeofday(&comeco, NULL); // incio
   
