@@ -3,7 +3,7 @@
 
 int main(void)
 {
-  int tam = 1000;
+  int tam = 100000;
   int num_filhos = 8;
   int tam_p = tam / num_filhos;
   int i = 1;

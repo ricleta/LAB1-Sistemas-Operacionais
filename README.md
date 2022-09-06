@@ -1,5 +1,7 @@
 # Sistemas-Operacionais, Tarefa 1: Processos e memória compartilhada
 
+## TODO: Escrever relatório, mencionar que tem 8 processos fake no sequencial e que antes o sequencial era mais rápido. O sequencial era mais rápido por causa do tempo para criação do fork
+
 LAB1 = https://replit.com/@ricleta/lab1-1#LAB1/
 
 ### Enunciado
