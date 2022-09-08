@@ -1,3 +1,6 @@
+// Eduardo Dantas Luna, 2111484
+// Ricardo Bastos Leta Vieira, 2110526
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <sys/time.h>
