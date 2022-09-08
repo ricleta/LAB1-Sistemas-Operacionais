@@ -9,8 +9,7 @@
 
 typedef struct timeval Timer;
 
-// malloca memoria para um vetor de tamanho tam e bota o
-// valor de cada elemento como valor
+// bota valor de cada elemento do vetor de tamanho tam como a int valor
 void preenche_array(int valor, int tam, int *arr)
 {
   int i;
@@ -23,14 +22,6 @@ void preenche_array(int valor, int tam, int *arr)
   for (i = 0; i < tam; i++)
   {
     arr[i] = valor;
-  }
-}
-
-void printa_array(int *arr, int tam)
-{
-  for (int i = 0; i < tam; i++)
-  {
-    printf("Pos %d = %d\n", i, arr[i]);    
   }
 }
 
